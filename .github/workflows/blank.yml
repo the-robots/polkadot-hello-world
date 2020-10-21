@@ -21,12 +21,13 @@ jobs:
       - name: install base dev env
         run: |
           sudo apt update
-          git clone -b v2.0.0 --depth 1 https://github.com/substrate-developer-hub/substrate-node-template
           rustup update nightly
           rustup update stable
           rustup target add wasm32-unknown-unknown --toolchain nightly
-          cd substrate-node-template/
-          cargo build --release
+          git clone https://github.com/substrate-developer-hub/substrate-front-end-template.git
+          cd ./substrate-front-end-template
+          yarn install
+          yarn start
 
 
 
