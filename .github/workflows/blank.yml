@@ -1,0 +1,41 @@
+# Doing some challenges to verify workflow status
+
+name: Beginner Challenge - local substrate development chain
+
+# Controls when the action will run
+
+on:
+  push
+
+jobs: 
+
+ main:
+    runs-on: ubuntu-latest
+    env: 
+      current: 'date(%yyyy-%MM-%dd)'
+    
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: install base dev env
+        run: |
+         sudo apt update
+         sudo apt install -y cmake pkg-config libssl-dev git build-essential clang libclang-dev curl
+         curl https://sh.rustup.rs -sSf | sh
+         source ~/.cargo/env
+         rustup default stable
+         rustup install nightly-${env.current}
+         rustup target add wasm32-unknown-unknown --toolchain nightly-${env.current}
+         cargo +nightly-${env.current} ...
+         rustup update
+         rustup update nightly
+         rustup target add wasm32-unknown-unknown --toolchain nightly
+
+
+
+
+         
+
+
+
