@@ -22,10 +22,10 @@ jobs:
         run: |
          sudo apt update
          sudo apt install -y cmake pkg-config libssl-dev git build-essential clang libclang-dev curl
-         curl https://sh.rustup.rs -sSf | sh
+         curl https://sh.rustup.rs -sSf | sh -y
          source ~/.cargo/env
          rustup default stable
-         rustup install nightly-${env.current}
+         rustup install nightly-${env.current} -y
          rustup target add wasm32-unknown-unknown --toolchain nightly-${env.current}
          cargo +nightly-${env.current} ...
          rustup update
