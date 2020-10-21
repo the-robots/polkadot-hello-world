@@ -22,11 +22,11 @@ jobs:
         run: |
           sudo apt update
           git clone -b v2.0.0 --depth 1 https://github.com/substrate-developer-hub/substrate-node-template
+          rustup update nightly
+          rustup update stable
+          rustup target add wasm32-unknown-unknown --toolchain nightly
+          
 
- #        source ~/.cargo/env 
- #        rustup default stable -y
- #        rustup install nightly-${env.current} -y
- #        rustup target add wasm32-unknown-unknown --toolchain nightly-${env.current}
  #        cargo +nightly-${env.current} ...
  #        rustup update
  #        rustup update nightly
