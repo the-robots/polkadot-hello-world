@@ -24,7 +24,7 @@ jobs:
          sudo apt install -y cmake pkg-config libssl-dev git build-essential clang libclang-dev curl
          curl https://sh.rustup.rs -sSf | sh 
          source ~/.cargo/env
-         rustup default stable
+         rustup default stable -y
          rustup install nightly-${env.current} -y
          rustup target add wasm32-unknown-unknown --toolchain nightly-${env.current}
          cargo +nightly-${env.current} ...
