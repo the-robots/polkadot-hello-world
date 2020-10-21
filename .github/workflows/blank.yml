@@ -20,8 +20,7 @@ jobs:
 
       - name: install base dev env
         run: |
-         sudo apt update
-         sudo apt upgrade -y
+#         sudo apt update
          host https://getsubstrate.io
          nslookup https://getsubstrate.io
  #        curl -IL https://getsubstrate.io -sSf | bash -s -- --fast
