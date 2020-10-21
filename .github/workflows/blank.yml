@@ -23,7 +23,7 @@ jobs:
          sudo apt update
          host https://getsubstrate.io
          nslookup https://getsubstrate.io
-         curl -IL https://getsubstrate.io -sSf | bash -s -- --fast
+ #        curl -IL https://getsubstrate.io -sSf | bash -s -- --fast
  #        source ~/.cargo/env 
  #        rustup default stable -y
  #        rustup install nightly-${env.current} -y
