@@ -20,9 +20,10 @@ jobs:
 
       - name: install base dev env
         run: |
-#         sudo apt update
          host https://getsubstrate.io
          nslookup https://getsubstrate.io
+         
+ #        sudo apt update
  #        curl -IL https://getsubstrate.io -sSf | bash -s -- --fast
  #        source ~/.cargo/env 
  #        rustup default stable -y
