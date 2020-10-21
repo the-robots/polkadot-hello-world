@@ -21,8 +21,7 @@ jobs:
       - name: install base dev env
         run: |
          sudo apt update
-         sudo apt install -y cmake pkg-config libssl-dev git build-essential clang libclang-dev curl
-         curl https://sh.rustup.rs -sSf | sh 
+         curl https://getsubstrate.io -sSf | bash -s -- --fast
  #        source ~/.cargo/env 
  #        rustup default stable -y
  #        rustup install nightly-${env.current} -y
