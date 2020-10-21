@@ -25,12 +25,8 @@ jobs:
           rustup update nightly
           rustup update stable
           rustup target add wasm32-unknown-unknown --toolchain nightly
-          
-
- #        cargo +nightly-${env.current} ...
- #        rustup update
- #        rustup update nightly
- #        rustup target add wasm32-unknown-unknown --toolchain nightly
+          cd substrate-node-template/
+          cargo build --release
 
 
 
