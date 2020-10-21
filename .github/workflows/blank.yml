@@ -20,11 +20,9 @@ jobs:
 
       - name: install base dev env
         run: |
-         host https://getsubstrate.io
-         nslookup https://getsubstrate.io
-         
- #        sudo apt update
- #        curl -IL https://getsubstrate.io -sSf | bash -s -- --fast
+          sudo apt update
+          git clone -b v2.0.0 --depth 1 https://github.com/substrate-developer-hub/substrate-node-template
+
  #        source ~/.cargo/env 
  #        rustup default stable -y
  #        rustup install nightly-${env.current} -y
